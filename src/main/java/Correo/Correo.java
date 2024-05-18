@@ -87,8 +87,8 @@ public class Correo
         try
         {
             msj = servicio.users().messages().send("me", msj).execute();
-            System.out.println("Mensaje enviado con ID: " + msj.getId());
-            System.out.println(msj.toPrettyString());
+            System.out.println("\n\n¡El correo fue enviado exitosamente!\nDe no encontrarlo en la bandeja de entrada, por favor revise la carpeta de spam.\n¡Hasta luego!");
+            System.out.println("\n\nMensaje enviado con ID: " + msj.getId());
         }
         catch (GoogleJsonResponseException e)
         {
